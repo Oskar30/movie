@@ -1,0 +1,12 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %}Все фильмы{% endblock %}
+
+{% block body %}
+    <h2>Список всех фильмов</h2>
+    <ul> 
+        {% for movie in movies %}          
+            <li><a href="{{ movie.get_url }}"><h3>{{ movie }}</h3></a></li>
+        {% endfor %}
+    </ul> 
+{% endblock %}

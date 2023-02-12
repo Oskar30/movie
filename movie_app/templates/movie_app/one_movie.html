@@ -1,0 +1,9 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %}Фильм {{ movie.name }}{% endblock %}
+
+{% block body %}
+    <h2>О Фильме {{ movie.name }} </h2>
+    {{ movie }}
+
+{% endblock %}
