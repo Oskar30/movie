@@ -4,6 +4,16 @@
 
 {% block body %}
     <h2>О Фильме {{ movie.name }} </h2>
-    {{ movie }}
-
+        {{ movie }}
+    <hr>
+    <h3>Режиссер {{ movie.director }}</h3>
+    <hr>
+    <h3>
+        Список актеров:
+        <ul>
+        {% for acter in movie.acters.all %}
+            <li>{{ acter }}</li>
+        {% endfor %}
+        </ul>
+    </h3>
 {% endblock %}

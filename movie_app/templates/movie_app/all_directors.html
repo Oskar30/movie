@@ -1,0 +1,12 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %}Режиссеры{% endblock %}
+
+{% block body %}
+    <h2>Список всех режиссеров</h2>
+    <ul> 
+        {% for di in movies %}          
+            <li><h3>{{ di.director }}</h3></li>
+        {% endfor %}
+    </ul> 
+{% endblock %}
