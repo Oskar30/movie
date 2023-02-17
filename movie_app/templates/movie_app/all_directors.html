@@ -5,8 +5,8 @@
 {% block body %}
     <h2>Список всех режиссеров</h2>
     <ul> 
-        {% for di in movies %}          
-            <li><h3>{{ di.director }}</h3></li>
+        {% for director in directors %}          
+            <li><a href="{{director.id}}"><h3>{{ director.name }}</h3></a></li>
         {% endfor %}
     </ul> 
 {% endblock %}

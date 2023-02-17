@@ -1,0 +1,24 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %}{{ acter.name }}{% endblock %}
+
+{% block body %}
+    {% if acter.gender == 'M' %}
+        <h2>Актер {{ acter.name }} </h2>
+        <h3>Пол Мужской </h3>
+    {% endif %}
+
+    {% if acter.gender == 'F' %}
+        <h2>Актриса {{ acter.name }} </h2>
+        <h3>Пол Женский </h3>
+    {% endif %}
+    <hr>
+    <h3>
+        Список Фильмов:
+        <ul>
+        {% for movie in acter.movie_set.all %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+        </ul>
+    </h3>
+{% endblock %}

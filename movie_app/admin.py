@@ -1,9 +1,10 @@
 from django.contrib import admin, messages
-from .models import Movie, Director, Acter
+from .models import Movie, Director, Acter, DressingRoom
 from django.db.models import QuerySet
 
 admin.site.register(Director)
 admin.site.register(Acter)
+admin.site.register(DressingRoom)
 
 
 class RatingFilter(admin.SimpleListFilter):
